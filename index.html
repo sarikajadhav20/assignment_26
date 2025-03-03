@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Assignment 26</title>
-    <style>
-      .student-card {
-        border: 1px double #292727;
-        margin: 20px 40px;
-        padding: 5px;
-        font-size:20px;
-        background-color: #fcdbb7;
-        border-radius:5px;
-        box-shadow:0 0 10px grey;
+  </head>
+  <style>
+    .text-center {
+      text-align: center;
+    }
+    .bg{
+      background-color:rgb(247, 247, 200);
     }
 
-    </style>
-</head>
-<body>
-        <h1>Students Cards</h1>
-        <div id="students-container"></div>
-    <script>
-        const students=[
-            "Sarika",
-            "Gayatri",
-            "Sarthak",
-            "Nikita",
-            "Rahul",
-        ];
+    .student-container {
+      background-color: #fff;
+      padding: 10px;
+      margin: 10px;
+      border: 2px double #ccc;
+    }
 
-        const studentContainer=document.getElementById("students-container")
-        for(let i=0; i<Students.length; i++){
-            studentContainer.innerHTML+=`<div class='student-card'>${students[i].toUpperCase()}</div>`
-        }
+    .student-card {
+      border: 1px solid #ccc;
+      margin: 5px;
+      padding: 5px;
+      background-color: #fce2c6;
+      border-radius: 5px;
+    }
+  </style>
+  <body class="bg">
+    <h1 class="text-center">Students Cards</h1>
+    <div class="student-container" id="students-list"></div>
+
+    <script>
+      const students = [
+        "Sarika",
+        "Sanjay",
+        "Kavita",
+        "Nikita",
+        "Sarthak",
+      ];
+
+      const studentsContainer = document.getElementById("students-list");
+
+      for (let i = 0; i < students.length; i++) {
+        studentsContainer.innerHTML =
+        studentsContainer.innerHTML +
+          `<div class="student-card">${students[i]}</div>`;
+      }
     </script>
-</body>
+  </body>
 </html>
