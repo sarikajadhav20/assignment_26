@@ -2,10 +2,36 @@
 <html>
 <head>
     <title>Assignment 26</title>
+    <style>
+      .student-card {
+        border: 1px solid #ccc;
+        margin: 5px;
+        padding: 5px;
+        background-color: #ffdab3;
+        border-radius: 5px;
+    }
+
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Students Cards</h1>
+        <div id="students-container"></div>
     </div>
+
+    <script>
+        const Students=[
+            "Sarika",
+            "Gayatri",
+            "Sarthak",
+            "Nikita",
+            "Rahul",
+        ];
+
+        const studentContainer=document.getElementById("students-container")
+        for(let i=0; i<Students.length; i++){
+            studentContainer.innerHTML+=`<div class='student-card'>${students[i].toUpperCase()}</div>`
+        }
+    </script>
 </body>
 </html>
